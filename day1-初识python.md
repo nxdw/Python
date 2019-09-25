@@ -47,3 +47,38 @@
     - 私有的实例属性用两个下划线开头。  
     
 ## 变量的使用
+  1.使用变量保存数据并进行运算
+  a = 123  
+  b = 321  
+  print(a + b)  
+  print(b - a)  
+  print(b * a)  
+  print(b / a)  
+  print(b // a)  
+  print(a % b)  
+  print(a ** b)  
+
+  2.使用input函数输入，使用int()进行类型转换，用占位符格式化输出的字符串   
+  a = int(input('a = '))   
+  b = int((input('b = '))   
+  print('%d + %d = %d ' % (a,b,a+b))   
+  print('%d // %d = %d' % (a,b,a // b))  
+  
+  3.使用type()检查变量类型
+  a = 100
+  b = 12.345
+  c = 1 + 5j
+  d = 'hello,world'
+  e =True
+  print(type(a))
+  print(type(b))
+  print(type(c))
+  print(type(d))
+  print(type(e))
+ 
+  4.对变量类型进行转换   
+  - int(): 将一个数字或字符串转换成整数，可以指定进制。
+  - float(): 将一个字符串转换成浮点数。
+  - str(): 将指定的对象转换成字符串形式，可以指定编码。
+  - chr(): 将整数转换成该编码对应的字符串（一个字符）。
+  - ord(): 将字符串（一个字符）转换成对应的编码（整数）。
