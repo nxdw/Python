@@ -65,16 +65,16 @@
   print('%d // %d = %d' % (a,b,a // b))  
   
   3.使用type()检查变量类型
-  a = 100
-  b = 12.345
-  c = 1 + 5j
-  d = 'hello,world'
-  e =True
-  print(type(a))
-  print(type(b))
-  print(type(c))
-  print(type(d))
-  print(type(e))
+  a = 100  
+  b = 12.345  
+  c = 1 + 5j  
+  d = 'hello,world'    
+  e =True  
+  print(type(a))     
+  print(type(b))  
+  print(type(c))  
+  print(type(d))  
+  print(type(e))  
  
   4.对变量类型进行转换   
   - int(): 将一个数字或字符串转换成整数，可以指定进制。
