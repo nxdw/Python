@@ -28,6 +28,7 @@
   
 ## while循环
   如果对循环次数未知，则使用while循环。while循环通过一个能够产生或转换出bool值得表达式来控制循环，表达式值为True则循环继续，表达式值为False则循环结束。
+  
 	import random  
 	answer = random.randint(1,100)  
 	counter = 0  
@@ -45,7 +46,7 @@
 	if counter > 7:  
 		print('you have a little stuppied')    
 		
-		
+	
 	for i in range(1,10):
 		for j in range(1,10):
 			print('%d*%d=%d' % (i,j,i * j),end='\t')
