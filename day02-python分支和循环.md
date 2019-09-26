@@ -16,9 +16,10 @@
 
 ## for-in 循环结构  
   如果已知循环次数，这用for-in循环即可
-  for x in range(100):  
-  	sum += x  
-  print(sum)  
+  
+	  for x in range(100):  
+		sum += x  
+	  print(sum)  
   
 ### range类型  
   range类型可以用来产生一个不变的数值序列，而且这个序列通常都是用在循环中的  
