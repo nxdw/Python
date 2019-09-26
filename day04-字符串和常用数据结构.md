@@ -257,3 +257,18 @@
   
 ## 字典
   字典是另一种可变容器模型，类似于我们生活中使用的字典，它可以存储任意类型对象，与列表、集合不同的是，字典的每个元素都是由一个键和一个值组成的“键值对”，键和值通过冒号分开。下面的代码演示了如何定义和使用字典。
+  
+    def main():
+        scores = {'tom':98,'jerry':97,'daxiong':100}
+        print(scores['tom'])
+        print(scores['daxiong'])
+        for elem in scores:
+            print('%s\t--->\t%d' % (elem,scores[elem]))
+        scores['jerry'] = 77
+        scores['daxiong'] = 101
+        print(scores)
+        if 'kit' in scores:
+            print(socres['kit'])
+        print(scores.get('kit'))
+        print(scores.get('kit',57))
+    main()
