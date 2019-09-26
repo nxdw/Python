@@ -64,9 +64,9 @@
   test.py
   
     from module1 import foo
-    foo()  # 输出hello，world！
+    foo()  #  输出hello，world！
     from module2 import foo
-    foo()  # 输出goodbye，world！
+    foo()  #  输出goodbye，world！
   
   也可以按照如下所示的方式来区分到底要使用哪一个foo函数。
   test.py
