@@ -112,7 +112,7 @@
     if __name__ == '__main__':
             main()
 
-## 列表排序
+#### 列表排序
     
     def main():
         list1 = ['orange','apple','zoo','internationalization','blueberry']
@@ -133,4 +133,43 @@
     if __name__ == '__main__':
         main()
 
+#### 生成列表
+
+    import sys
+    def main():
+        f = [x for x in  range(1,10)]
+        print(f)
+        f = [x + y for x in 'ABCDE' for y in '1234567']
+        print(f)
+        # 用列表的生成表达式语法创建列表容器
+        # 用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间
+        f = [x ** 2 for x in range(1,100)]
+        print(sys.getsizeof(f))  # 查看对象占用内存的字节数
+        print(f)
+        # 请注意下面的代码创建的不是一个列表而是一个生成器对象
+        # 通过生成器可以获取到数据但它不占用额外的空间存储数据
+        # 每次需要数据的时候就通过内部的运算得到数据(需要花费额外的时间)
+        f = (x ** 2 for x in range(1,100))
+        print(sys.getsizeof(f))
+        print(f)
+        for val in f:
+            print(val)
+
+    if __name__ == '__main__':
+        main()
+        
+  除了上面提到的生成器语法，python还有另一种定义生成器的方式，就是通过yield关键字将一个普通函数改造成生成器函数。下面的代码演示了如何实现一个生成菲波那切数列的生成器。
+  
+    def fib(n):
+        a,b = 0,1
+        for _ in range(n):
+            a,b = b,a + b
+            yield a
+
+    def main():
+        for val in fib(20):
+            print(val)
+
+    if __name__ == '__main__':
+        main()
 
