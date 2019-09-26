@@ -1,18 +1,21 @@
 ## if判断语句的使用 
-  由if、elif、else关键字构成，多个判断语句可以嵌套，在python中用缩进的方式来设置代码的层次结构。  
-  username = input('请输入用户名：')  
-  password = input('请输入口令：')    
-  if username == 'admin' and passwd == '123456':    
-    print('success')    
-  else:    
-    print('failer')    
-
-  if condition:   
-  	print(....)   
-  elif:   
-  	print(....)   
-  else:   
-    print(....)   
+  由if、elif、else关键字构成，多个判断语句可以嵌套，在python中用缩进的方式来设置代码的层次结构。 
+  
+	  username = input('请输入用户名：')  
+	  password = input('请输入口令：')    
+	  if username == 'admin' and passwd == '123456':    
+		print('success')    
+	  else:    
+		print('failer')    
+  
+  if语句格式
+  
+	  if condition:   
+		print(....)   
+	  elif:   
+		print(....)   
+	  else:   
+		print(....)   
 
 ## for-in 循环结构  
   如果已知循环次数，这用for-in循环即可
