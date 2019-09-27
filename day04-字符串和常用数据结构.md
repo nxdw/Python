@@ -285,3 +285,79 @@
 
     if __name__ == '__main__':
         main()
+
+## 练习
+#### 在屏幕上显示跑马灯文字
+
+    import os
+    import time
+
+    def main():
+        content = '北京欢迎你为你开天辟地.....'
+        while True:
+            # 清理屏幕上的输出
+            os.system('cls')
+            print(content)
+            # 休眠200ms
+            time.sleep(0.2)
+            content = content[1:] + content[0]
+
+    if __name__ == '__main__':
+        main()
+        
+#### 设计一个函数产生指定长度的验证码，验证码由大小写字母和数字构成。
+
+    import random
+
+    def generate_code(code_len):
+        """
+        生成指定长度的验证码
+
+        :param code_len: 验证码的长度(默认4个字符)
+
+        :return: 由大小写英文字母和数字构成的随机验证码
+
+        """
+        all_chars='0123456789abcdefghijklmnopqrstuvwxyz'
+        last_pos = len(all_chars) - 1
+        code = ''
+        for _ in range(code_len):
+            index = random.randint(0,last_pos)
+            code += all_chars[index]
+        return code
+
+    def main():
+        for _ in range(1,10):
+            a = generate_code(6)
+            print(a)
+
+
+    if __name__ == '__main__':
+        main()
+
+#### 幸运的基督徒
+
+    """
+
+    《幸运的基督徒》
+    有15个基督徒和15个非基督徒在海上遇险，为了能让一部分人活下来不得不将其中15个人扔到海里面去，有个人想了个办法就是大家围成一个圈，由某个人开始从1报数，报到9的人就扔到海里面，他后面的人接着从1开始报数，报到9的人继续扔到海里面，直到扔掉15个人。由于上帝的保佑，15个基督徒都幸免于难，问这些人最开始是怎么站的，哪些位置是基督徒哪些位置是非基督徒。
+
+    """
+
+    def main():
+        persons = [True] * 30
+        counter,index,number = 0,0,0
+        while counter < 15:
+            if persons[index]:
+                number += 1
+                if number == 9:
+                    persons[index] = False
+                    counter += 1
+                    number = 0
+            index += 1
+            index %= 30
+        for person in persons:
+            print('基' if person else '非',end='')
+
+    if __name__ == '__main__':
+        main()
