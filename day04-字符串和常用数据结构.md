@@ -260,15 +260,28 @@
   
     def main():
         scores = {'tom':98,'jerry':97,'daxiong':100}
+        # 通过键可以获取字典中对应的值
         print(scores['tom'])
         print(scores['daxiong'])
+        # 对字典进行遍历
         for elem in scores:
             print('%s\t--->\t%d' % (elem,scores[elem]))
+        # 更新字典中的元素
         scores['jerry'] = 77
         scores['daxiong'] = 101
         print(scores)
         if 'kit' in scores:
             print(socres['kit'])
         print(scores.get('kit'))
+        # 通过get方法获取对应的值但是可以设置默认值
         print(scores.get('kit',57))
-    main()
+        # 删除字典中的元素
+        print(scores.popitem())
+        print(scores.popitem())
+        # print(scores.popitem('daxiong',101))
+        # 清空字典
+        scores.clear()
+        print(scores)
+
+    if __name__ == '__main__':
+        main()
